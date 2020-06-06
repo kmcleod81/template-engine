@@ -6,12 +6,12 @@
 ![Template Engine](./Assets/templateEngine.png)
 
 ## Table of Contents:
-* [Description](#Description)
-* [How to Install](#How-to-Install)
-* [Usage](#Usage)
-* [Tests](#Tests)
-* [Contributors](#Contributors)
-* [Link to Page](#Link-to-Page)
+* [Description](##Description)
+* [How to Install](##How-to-Install)
+* [Usage](##Usage)
+* [Tests](##Tests)
+* [Contributors](##Contributors)
+* [Link to Page](##Link-to-Page)
 
 ## Description
 This application is used to create a team hierarchy that displays through the browser that can keep track of your team and thier information.
