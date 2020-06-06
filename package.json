@@ -1,0 +1,29 @@
+{
+  "name": "template-engine",
+  "version": "1.0.0",
+  "description": "",
+  "main": "app.js",
+  "directories": {
+    "lib": "lib",
+    "test": "test"
+  },
+  "dependencies": {
+    "algo": "^1.0.0",
+    "inquirer": "^7.1.0",
+    "jest": "^26.0.1"
+  },
+  "devDependencies": {},
+  "scripts": {
+    "test": "jest --verbose test/*"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/kmcleod81/template-engine.git"
+  },
+  "author": "Karla McLeod",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/kmcleod81/template-engine/issues"
+  },
+  "homepage": "https://github.com/kmcleod81/template-engine#readme"
+}

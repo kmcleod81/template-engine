@@ -10,7 +10,9 @@ const outputPath = path.join(OUTPUT_DIR, "team.html");
 
 const render = require("./lib/htmlRenderer");
 
+const teamMembers = [
 
+]
 // Write code to use inquirer to gather information about the development team members,
 // and to create objects for each team member (using the correct classes as blueprints!)
 
@@ -48,7 +50,8 @@ function askQuestions() {
                                 name: "github"
                             }).then(
                                 function ({ github }) {
-                                    generateEngineer(name, id, email, github)
+                                    const engineer = new Engineer(name, id, email, github)
+                                    teamMembers.push(engineer)
                                     addOtherMembers()
                                 }
                             )
@@ -61,7 +64,8 @@ function askQuestions() {
                                 name: "school"
                             }).then(
                                 function ({ school }) {
-                                    generateIntern(name, id, email, school)
+                                    const intern = new Intern(name, id, email, school)
+                                    teamMembers.push(intern)
                                     addOtherMembers()
                                 }
                             )
@@ -74,7 +78,8 @@ function askQuestions() {
                                 name: "officeNumber"
                             }).then(
                                 function ({ officeNumber }) {
-                                    generateManager(name, id, email, officeNumber)
+                                    const manager = new Manager(name, id, email, officeNumber)
+                                    teamMembers.push(manager)
                                     addOtherMembers()
                                 }
                             )
@@ -104,6 +109,10 @@ function addOtherMembers() {
         })
 }
 askQuestions()
+
+function renderHTML() {
+    fs.writeFileSync(outputPath, render(teamMembers), "UTF-8")
+}
 
 
 // After the user has input all employees desired, call the `render` function (required
